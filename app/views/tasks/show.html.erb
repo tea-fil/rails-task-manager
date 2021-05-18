@@ -1,0 +1,13 @@
+<div class="container form-control p-3 m-5">
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+
+<%= link_to "Delete #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+   
+<p><%= link_to "Update", update_task_path(@task) %></p>
+<p><%= link_to "Back to the home page", tasks_path %></p>
+</div>

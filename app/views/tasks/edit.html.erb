@@ -1,0 +1,9 @@
+<div class="container form-control p-3 m-5">
+<%= simple_form_for(@task) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+ <p class="mt-3"> <%= f.submit %> </p>
+<% end %>
+<p><%= link_to "Back to the home page", tasks_path %></p>
+</div>
+
